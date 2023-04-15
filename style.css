@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+     display: flex; /*will bring to center */
+     justify-content: center;
+    align-items: center; /* It will vertically center*/
+    background-color: #BBD6B8;
+}
+.container{
+    width: 600px;
+    height: min-content; /* It will take the height according to the content */
+    background-color: white;
+    border-radius: 12px;
+    padding: 28px;
+}
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between; /* we have to separate the search box and search button */
+    align-items: center; /* It will vertically center*/
+}
+.search-box input{
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize; /* After every word the first letter will be capital */
+    color: black;
+    background-color: #e6f5fb; /* color inside search box */
+    padding: 12px 16px; /* The first value 12px refers to the top and bottom padding, while the second value 16px refers to the left and right padding. */
+    border-radius: 14px; /* corner will be soft */
+}
+
+.search-box input::placeholder{
+    color: #000; /* inside the search box color changes to black */
+}
+.search-box button{
+    width: 46px;
+    height: 46px;
+    background-color: #e6f5fb;
+    border-radius: 50%; /* search icon shape will change to circle */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover{
+    color:white;
+    background-color: #94AF9F;
+}
+
+.weather-body{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px; /* margin top aur botton me 20 px aa jayege */
+}
+
+.weather-body img{
+    width: 60%;
+}
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+.weather-box .temperature{ /* to access class inside class we use after .weather-box . temperature */
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+}
+.weather-box .temperature sup{
+    font-size: 20px;
+    position: absolute; /* if we remove this line there is a gap btw temperature and celcieus */
+    font-weight: 600;
+}
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+.weather-details{
+    width: 100%;
+    display: flex; /* humidiy and windspeed will be row from column */
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.humidity, .wind{
+    display: flex; /* the humidity icon and 45 will be in row from column */
+    align-items: center;
+}
+.humidity{
+    margin-left: 20px;
+}
+.wind{
+    margin-right: 20px;
+}
+.weather-details i{
+    font-size: 36px;
+}
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
+}
+.text span{
+    font-size: 20px;
+    font-weight: 700; /* Humadity will be bold */
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+} */
+h1 {
+    font-size: 36px;
+    margin-top: 50px;
+}
+label {
+    font-size: 20px;
+}
+select {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.secondbutton {
+    font-size: 22px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.secondbutton:hover {
+    background-color: #00698C;
+}
+#recommendation {
+    font-size: 24px;
+    margin-top: 50px;
+}
