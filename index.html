@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style_hidden.css">
+       
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search-box">
+                <input type="text" placeholder="Enter you location" class="input-box">
+
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+            </div>
+        </div>
+
+        <div class="location-not-found">
+            <h1>Sorry, Location not found!!!</h1>
+            <img src="https://github.com/CodeTraversal/JavaScript-Projects/blob/main/Weather%20App/assets/404.png?raw=true" alt="404 Error">
+        </div>
+
+        <div class="weather-body">
+            <img src="https://github.com/CodeTraversal/JavaScript-Projects/blob/main/Weather%20App/assets/cloud.png?raw=true" alt="Weather Image" class="weather-img">
+
+            <div class="weather-box">
+                <p class="temperature">0<sup>°C</sup></p>  <!--sub is used for power -->
+                <p class="description">Light Rain</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-sharp fa-solid fa-droplet"></i>
+                    <div class="text"> <!-- we have take text class because we have to put the value of humidity-->
+                        <span id="humidity">45%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <<i class="fa-solid fa-wind"></i>
+                    <div class="text"> <!-- we have take text class because we have to put the value of humidity-->
+                        <span id="wind-speed">12km/H</span>
+                        <p>wind speed</p>
+
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <label for="mood">Song Suggestion based on weather:</label>
+    <select id="mood">
+        <option value="Clouds">Clouds</option>
+        <option value="Clear">Clear</option>
+        <option value="Rain">Rain</option>
+        <option value="Mist">Mist</option>
+        <option value="Snow">Snow</option>
+    </select>
+    <button class="secondbutton" onclick="recommendSong()">Get recommendation</button>
+    <div id="recommendation"></div>
+
+    <script src="script.js"></script>
+    <script src="./songsdata.js"></script>
+    <script src="https://kit.fontawesome.com/0f5cf61f8f.js" crossorigin="anonymous"></script>
+</body>
+</html>
